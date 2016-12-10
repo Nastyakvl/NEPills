@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ea8d8279455f2b062c39aa8b903343e092753af1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_e83d5d70f69b38c300df36cab21ad0efc44f9e76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ccdee7eeb7c5c667159319705156d657f993c500.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_71378b4fc422826dfafeff5961fb2ca860b1b67b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_1716e3dafedd84d9a53bc92b29c4b47b290746ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_71426e3bd2d60ddf76fe92768c79f6d78418d701.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_203c7e5260806483269f586c67dcf12783f493f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_fa76248dfa92e820a13231c0211f770b2c06fb21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_7c5d2f19d4891fa7d503fa6d3396d5c91c0b8f76.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_8e2fb3d9ab645cde573601b2981c6ce6e52b86e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_cadc97f220cfa2f5fb1a463c4fd39f11ebe0b7cd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_3a81d8222d49ebf11c110cf345b4fe30ab15fcd0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_7fab48e2df890ac165dde452fd1c9c9e4811419b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_93ee3f8938a3e21ab79eed93feefc3d773cb6641.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_35e60a636276504b5f8fec64d169ae0b618a0b45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_ff1445dfcf7189d83cd8e19586c2722906ff6409.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="9bdfbec0e2d68e756c285c6040f90ee82ab039ef">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\instant-run_32bcf91131cd46e380f63b28a9e8ea759077eca1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_ce940618146031cd689d9eaabc060dea2cfa8289.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="f46dc2c3776ab6010969adc4e7b2ffec8a3e5d81">
+        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_a3aae72e8865a1896a5f23ce7027e697c7ea26b6.jar" />
+    </item>
+
+</items>

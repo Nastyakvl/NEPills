@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">EPills</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="add_new">Добавить новое лекарство</string>
+    <string name="correct">Редактирование</string>
+</resources>
