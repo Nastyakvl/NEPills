@@ -141,10 +141,10 @@ public class InfoCourseActivity extends AppCompatActivity {
             //Динамически создаем кнопки
             int id = 0;
             //Кнопка "Изменить"
-            Button change_button = new Button(this);
-            change_button.setId(id);
-            change_button.setText("Удалить");
-            change_button.setOnClickListener(new View.OnClickListener() {
+            Button delete_button = new Button(this);
+            delete_button.setId(id);
+            delete_button.setText("Удалить");
+            delete_button.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     AlertDialog.Builder delete_dialog = new AlertDialog.Builder(InfoCourseActivity.this);
                     delete_dialog.setTitle("Удалить")
@@ -180,7 +180,21 @@ public class InfoCourseActivity extends AppCompatActivity {
                     alert.show();
                 }
             });
+            tableLayout.addView(delete_button);
+
+            //Кнопка "Изменить" ДЛЯ ЛЕНИ
+            Button change_button = new Button(this);
+            change_button.setId(id++);
+            change_button.setText("Изменить");
+            change_button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                }
+            });
             tableLayout.addView(change_button);
+
+
 
 
         }
