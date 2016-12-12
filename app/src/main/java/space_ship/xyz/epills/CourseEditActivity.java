@@ -1,11 +1,14 @@
 package space_ship.xyz.epills;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.net.sip.SipAudioCall;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +17,9 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -28,7 +34,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
+import java.util.Date;
 
 
 public class CourseEditActivity extends AppCompatActivity {
@@ -57,18 +63,41 @@ public class CourseEditActivity extends AppCompatActivity {
     int receptionsTimeStart = 8;
     int receptionsTimeEnd = 21;
 
+    String calID="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_edit);
-
-        Log.d(LOG_TAG, "ADD onCreate");
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Добавление курса");
         setSupportActionBar(toolbar);
 
         dbHelper = new DBHelper(this);
+
+        // -----------------------Находим календарь----------------------
+        Uri calendars = Uri.parse("content://com.android.calendar/calendars");
+        String[] projection = new String[] { "_id", "name" };
+        String calName;
+        //String calID="";
+        Cursor managedCursor = this.managedQuery(calendars, projection, null, null, null);
+        if (managedCursor != null && managedCursor.moveToFirst())
+        {
+            int nameColumn = managedCursor.getColumnIndex("name");
+            int idColumn = managedCursor.getColumnIndex("_id");
+
+                calName = managedCursor.getString(nameColumn);
+                calID = managedCursor.getString(idColumn);
+              //  alert(calName+""+calID);
+               // if (calName != null) // … UI
+
+        }
+        else alert("Err");
+        managedCursor.close();
+        //-----------------------------------------------
+
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setImageResource(R.drawable.ic_course_edit_button2);
@@ -102,7 +131,7 @@ public class CourseEditActivity extends AppCompatActivity {
                 //проверка на корректность заполнения
                 if(name.length() == 0 || date_start.length() == 0 || date_end.length() == 0)
                 {
-                    Snackbar.make(view, "Проверьте корректность заполнения поленй!", Snackbar.LENGTH_LONG)
+                    Snackbar.make(view, "Проверьте корректность заполнения полей!", Snackbar.LENGTH_LONG)
                             .setAction("Action", null).show();
                 }
                 //если данные заполнены корректно - добавляем в БД
@@ -124,6 +153,8 @@ public class CourseEditActivity extends AppCompatActivity {
                     data.put(DBHelper.KEY_COURSES_DATEEND, date_end);
                     data.put(DBHelper.KEY_COURSES_RECEPTIONSCOUNT, receptions_count);
 
+
+
                     int courseId = Integer.parseInt( new String( "" + database.insert(dbHelper.TABLE_COURSES, null, data) ));
 
                     //если успешно - добавляем приёмы
@@ -135,6 +166,76 @@ public class CourseEditActivity extends AppCompatActivity {
                             data.put(DBHelper.KEY_RECEPTIONS_COURSEID, courseId);
                             data.put(DBHelper.KEY_RECEPTIONS_TIME, receptions_info[i][0]);
                             data.put(DBHelper.KEY_RECEPTIONS_COUNT, receptions_info[i][1]);
+
+                           //-----------------Для напоминания---------------
+                            Date dateNotif=null;
+                            SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+                            long startMillis = 0;
+                            long endMillis = 0;
+                            try {
+                                dateNotif = format1.parse(date_start+" "+receptions_info[i][0]); //переводим строку в дату
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+
+                            //startMillis = (long) dateNotif.getTime() / 1000;
+
+                            Calendar beginTime = Calendar.getInstance();
+                            beginTime.setTime(dateNotif);
+
+                            startMillis = beginTime.getTimeInMillis();
+
+                            endMillis = startMillis +900000;
+
+                            long end;
+                            try {
+                                dateNotif = format1.parse(date_end+" "+receptions_info[i][0]); //переводим строку в дату
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+
+                            //startMillis = (long) dateNotif.getTime() / 1000;
+
+                            Calendar endTime = Calendar.getInstance();
+                            endTime.setTime(dateNotif);
+
+                            end = endTime.getTimeInMillis();
+
+                            int count=(int) ( (end-startMillis)/(24 * 60 * 60 * 1000))+1;
+                           // alert(String.valueOf(count));
+
+                            //alert("count "+String.valueOf(count));
+                           // alert("minus "+String.valueOf(end-startMillis));
+
+
+                           /* try {
+                                dateNotif = format1.parse(date_end+" "+receptions_info[i][0]); //переводим строку в дату
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+                            beginTime.setTime(dateNotif);
+                            String until=String.valueOf(beginTime.getTimeInMillis());*/
+
+                            ContentResolver cr = getContentResolver();
+                            ContentValues values = new ContentValues();
+                            values.put(CalendarContract.Events.DTSTART, startMillis);
+                            values.put(CalendarContract.Events.DTEND, endMillis);
+                            values.put(CalendarContract.Events.TITLE, "Время пить таблетку: "+name);
+                            values.put(CalendarContract.Events.DESCRIPTION, receptions_info[i][0]);
+                            values.put(CalendarContract.Events.CALENDAR_ID, calID);
+                            values.put(CalendarContract.Events.EVENT_TIMEZONE, "Russia/Moscow");
+                            values.put(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT="+String.valueOf(count)+";");
+
+                            Uri uri=null;
+                            try {
+                                uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+                            }
+                            catch(SecurityException e){alert(e.toString());}
+
+                           //int eventID =Integer.parseLong(uri.getLastPathSegment());
+                            //-------------------------------------------------------------------
+
+
 
                             if(database.insert(dbHelper.TABLE_RECEPTIONS, null, data) == -1)
                             {

@@ -449,7 +449,6 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
         cursorActive.close();
         cursorPassive.close();
 
-
     }
 
 
