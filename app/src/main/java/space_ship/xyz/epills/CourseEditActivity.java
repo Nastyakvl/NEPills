@@ -75,6 +75,7 @@ public class CourseEditActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         dbHelper = new DBHelper(this);
+/*
 
         // -----------------------Находим календарь----------------------
             Uri calendars = Uri.parse("content://com.android.calendar/calendars");
@@ -96,6 +97,7 @@ public class CourseEditActivity extends AppCompatActivity {
 
         //-----------------------------------------------
 
+*/
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -165,6 +167,7 @@ public class CourseEditActivity extends AppCompatActivity {
                             data.put(DBHelper.KEY_RECEPTIONS_COURSEID, courseId);
                             data.put(DBHelper.KEY_RECEPTIONS_TIME, receptions_info[i][0]);
                             data.put(DBHelper.KEY_RECEPTIONS_COUNT, receptions_info[i][1]);
+/*
 
                            //-----------------Для напоминания---------------
                             Date dateNotif=null;
@@ -207,13 +210,15 @@ public class CourseEditActivity extends AppCompatActivity {
                            // alert("minus "+String.valueOf(end-startMillis));
 
 
-                           /* try {
+                           */
+/* try {
                                 dateNotif = format1.parse(date_end+" "+receptions_info[i][0]); //переводим строку в дату
                             } catch (ParseException e) {
                                 e.printStackTrace();
                             }
                             beginTime.setTime(dateNotif);
-                            String until=String.valueOf(beginTime.getTimeInMillis());*/
+                            String until=String.valueOf(beginTime.getTimeInMillis());*//*
+
 
                             ContentResolver cr = getContentResolver();
                             ContentValues values = new ContentValues();
@@ -245,8 +250,9 @@ public class CourseEditActivity extends AppCompatActivity {
                             catch(SecurityException e){}
 
                             //-------------------------------------------------------------------
+*/
 
-
+/*
                             //Добавляем данные в таблицу course_event
                             ContentValues data2 = new ContentValues();
 
@@ -269,7 +275,7 @@ public class CourseEditActivity extends AppCompatActivity {
 
                                 } while(eventInfo.moveToNext());
                             }
-                            else {alert("NOTHING");}
+                            else {alert("NOTHING");}*/
 
 
 
