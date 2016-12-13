@@ -220,7 +220,7 @@ public class CourseEditActivity extends AppCompatActivity {
                             ContentValues values = new ContentValues();
                             values.put(CalendarContract.Events.DTSTART, startMillis);
                             values.put(CalendarContract.Events.DTEND, endMillis);
-                            values.put(CalendarContract.Events.TITLE, "Время пить таблетку: "+name);
+                            values.put(CalendarContract.Events.TITLE, "Время пить лекарство: "+name);
                             values.put(CalendarContract.Events.DESCRIPTION, receptions_info[i][0]);
                             values.put(CalendarContract.Events.CALENDAR_ID, calID);
                             values.put(CalendarContract.Events.EVENT_TIMEZONE, "Russia/Moscow");
@@ -232,7 +232,18 @@ public class CourseEditActivity extends AppCompatActivity {
                             }
                             catch(SecurityException e){alert(e.toString());}
 
-                           //int eventID =Integer.parseLong(uri.getLastPathSegment());
+                           long eventID =Long.parseLong(uri.getLastPathSegment());
+
+                            ContentResolver cr2 = getContentResolver();
+                            ContentValues values2 = new ContentValues();
+                            values2.put(CalendarContract.Reminders.MINUTES, 0);
+                            values2.put(CalendarContract.Reminders.EVENT_ID, eventID);
+                            values2.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
+                            try {
+                                Uri uruu = cr2.insert(CalendarContract.Reminders.CONTENT_URI, values2);
+                            }
+                            catch(SecurityException e){}
+
                             //-------------------------------------------------------------------
 
 

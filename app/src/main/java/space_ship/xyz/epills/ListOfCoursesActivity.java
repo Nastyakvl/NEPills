@@ -90,7 +90,7 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
         Cursor cursorPassive = database.rawQuery("select _id, dateend,name from courses where " +
                 "date(substr(dateend,7,4) || '-' || substr(dateend,4,2) || '-' || substr(dateend,1,2))  < date('"+currentDate+"')", null);
 
-        if(cursorActive.getCount()!=0 || cursorPassive.getCount()!=0) {
+        if(cursorActive.getCount()!=0 || cursorPassive.getCount()!=0 || cursorFuture.getCount()!=0) {
             //Если такие имеются выводим "Активные" и все курсы, входящие в эту группу
             if (cursorActive.moveToFirst()) {
 

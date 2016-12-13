@@ -61,7 +61,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="ba3e5d759befeff20e840c350fcc8713051c4be6">
+        sha1="d7096127e50ca0c67485219ea8695de3f4f4a97c">
         <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_93bccd3363b27bc7b1f482b4c9980df6b3bc678c\classes.dex" />
     </item>
     <item
@@ -286,7 +286,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="0bc2682505d0937df7c2848d69e4181c13b7f9fa">
+        sha1="0745c4ffdafcd8c9e8845339fd219c73bf5f8726">
         <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f9f4fd2203084109b234138cf2619b36c66a2a6d\classes.dex" />
     </item>
     <item
