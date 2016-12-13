@@ -2,346 +2,175 @@
 <items version="2" >
 
     <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_356eb27a4040a0885a819aecb32f5b443786bb58\classes.dex" />
+        sha1="043a6900f0e5a2f04187bd3dcda716712aa17d3d">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\instant-run_b38818dcae991ab61418df996a8a63fd23b40f70.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ea8d8279455f2b062c39aa8b903343e092753af1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_e83d5d70f69b38c300df36cab21ad0efc44f9e76.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_ccdee7eeb7c5c667159319705156d657f993c500.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="867dad63c33388ff8c7644b236579355036d075f">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_037a540263b5c86ec1afec83185f440360c3e330\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_9beb2790845a414ac6dbcca68d563729892ed2ec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7096127e50ca0c67485219ea8695de3f4f4a97c">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_93bccd3363b27bc7b1f482b4c9980df6b3bc678c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_fa76248dfa92e820a13231c0211f770b2c06fb21\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_081302e244163a7be4dea9a54ec1bf107c4992dc\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_71378b4fc422826dfafeff5961fb2ca860b1b67b.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_9432f0e3ff2743e7df93dd81a6434a6950958d9c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_45fbde6a969d26c54daaad9df57e5171a672136a\classes.dex" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_a715744c6c350f5dbe19b9fba3f3ca2d4a5c7fb1.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_1716e3dafedd84d9a53bc92b29c4b47b290746ff.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_71426e3bd2d60ddf76fe92768c79f6d78418d701.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_fa76248dfa92e820a13231c0211f770b2c06fb21.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_44e3ea435439fe89b5a8a17de579931bf9f6d11c\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_7c5d2f19d4891fa7d503fa6d3396d5c91c0b8f76.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_6a95ca268695afbe313f956a841022d34d53db9f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_8108c49c3eda55aaf4aaf3ea0efbb05be8ec25a0\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_3a81d8222d49ebf11c110cf345b4fe30ab15fcd0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_93ee3f8938a3e21ab79eed93feefc3d773cb6641.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_22b72b8440a6f84c80616e8224da61273e2d5f7a\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_c4acc1b86e4fe1147f6ae4e649840196053e8197\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_ff1445dfcf7189d83cd8e19586c2722906ff6409.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_da979fbc819056aaf04f64d127b635f60aafa13c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_2723894088c144d98e0cb53d150b51fefadbd418\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_229b4b939d05c387d9acee80c80cb309c671557f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_6d89a81ee4f13213b38f45375a2acb5c2b340a52\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_203c7e5260806483269f586c67dcf12783f493f3.jar" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_45e0d943a41806d68137742c9381d122917cd5ea.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_8e2fb3d9ab645cde573601b2981c6ce6e52b86e7.jar" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-24.2.1_a65a0fedcb84b59e33bbb5dc46f4ee3ff755520a.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_cadc97f220cfa2f5fb1a463c4fd39f11ebe0b7cd.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="0745c4ffdafcd8c9e8845339fd219c73bf5f8726">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f9f4fd2203084109b234138cf2619b36c66a2a6d\classes.dex" />
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_5527f81782375c730e24160f2a5a72f16d00d6fe.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-24.2.1_c89cb84d964b4bf7de8552ba84b26b30d46d3d1b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fe06881febb533e2a5bcb736ed599f1403ddb9a6">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_e9758924c64635826376ed668e8646c07a43fe02.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_7fab48e2df890ac165dde452fd1c9c9e4811419b.jar" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-24.2.1_7822304abe56c771ca737014210be509b95d2cea.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_35e60a636276504b5f8fec64d169ae0b618a0b45.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\NEPills\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_15b3fa18d0cd35adabc5de17aa2d048f24dc558c\classes.dex" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-24.2.1_cc5263f660509814824432e6ea59becdddd22e88.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.3"
-        sha1="9bdfbec0e2d68e756c285c6040f90ee82ab039ef">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\instant-run_32bcf91131cd46e380f63b28a9e8ea759077eca1.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
         sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_ce940618146031cd689d9eaabc060dea2cfa8289.jar" />
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-24.2.1_0259a9ac4963018186eecb5f22f112967f0cb1cf.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.3"
-        sha1="f46dc2c3776ab6010969adc4e7b2ffec8a3e5d81">
-        <dex dex="C:\Users\Nastya\Documents\GitHub\EPills\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_a3aae72e8865a1896a5f23ce7027e697c7ea26b6.jar" />
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-24.2.1_e0624b1562f9c3107f873d5c6c29bd328c8c7569.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.2.1_ce0df21946f52e16a31573d9bca470a0393d0cc6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\support-annotations-24.2.1_e02ce9ea35e02d209308b6785607ba642a9c93a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.1_82eddc79bc7c9f7f02dad4f866dd11cce491816f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_f119d8258887f3ad3747aec5a9ec1651e65f8e92.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\internal_impl-24.2.1_67cd680ae85dfb15c4cbfd70506133ac4614cad9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-24.2.1_0541d54988ca8fa38c74d4f5bffb33511a19129a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-design-24.2.1_119ccd134c02c08851a4a8b6b7f8ceb377bdd8fc.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\GitHub\NEPills\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.3"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\GitHub\NEPills\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-24.2.1_15b2af7a01176e721fb714fa0132bf8f325c5423.jar" />
     </item>
 
 </items>

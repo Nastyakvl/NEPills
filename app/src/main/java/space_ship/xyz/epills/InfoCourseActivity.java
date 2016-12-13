@@ -42,6 +42,7 @@ public class InfoCourseActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "States";
     private DBHelper dbHelper;
+    private SQLiteDatabase database;
 
 
     @Override
@@ -51,14 +52,14 @@ public class InfoCourseActivity extends AppCompatActivity {
 
         //подключаемся к бд
         dbHelper = new DBHelper(this);
-        final SQLiteDatabase database = dbHelper.getWritableDatabase();
+        database = dbHelper.getWritableDatabase();
 
         final AlertDialog.Builder delete = new AlertDialog.Builder(this);
 
         //Получаем _id лекарства
         Intent intent = getIntent();
         final String course_id = String.valueOf(intent.getIntExtra("course_id", 0));
-
+        final int courseID = Integer.parseInt(course_id);
 
         //Получаем название, начало и конец приема лекарства из БД
         String table_info = "courses";
@@ -92,6 +93,7 @@ public class InfoCourseActivity extends AppCompatActivity {
         String selection_time = DBHelper.KEY_RECEPTIONS_COURSEID + " = ?";
         String[] selectionArgs_time = new String[]{course_id};
         Cursor time = database.query(table_time, columns_time, selection_time, selectionArgs_time, null, null, null);
+
         //Выводим данные
         TableLayout tableLayout = (TableLayout) findViewById(R.id.table);
         int receptions_count = time.getCount();//кол-во приемов
@@ -140,7 +142,8 @@ public class InfoCourseActivity extends AppCompatActivity {
             }
             //Динамически создаем кнопки
             int id = 0;
-            //Кнопка "Изменить"
+
+            //Кнопка "Удалить"
             Button delete_button = new Button(this);
             delete_button.setId(id);
             delete_button.setText("Удалить");
@@ -160,6 +163,19 @@ public class InfoCourseActivity extends AppCompatActivity {
                                                 new String[]{course_id});
                                         database.delete(DBHelper.TABLE_RECEPTIONS, "courseid = ?",
                                                 new String[]{course_id});
+
+                                        //Удаляем все eventId по courseId
+                                        try
+                                        {
+                                            database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
+                                                    new String[] {course_id});
+                                        }
+                                        catch (Exception e)
+                                        {
+                                            alert(e.getMessage());
+                                        }
+
+
                                     } catch (Exception e) {
                                         alert(e.getMessage());
                                     }
@@ -189,7 +205,7 @@ public class InfoCourseActivity extends AppCompatActivity {
             change_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    
                 }
             });
             tableLayout.addView(change_button);

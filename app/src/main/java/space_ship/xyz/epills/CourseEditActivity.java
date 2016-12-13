@@ -77,24 +77,23 @@ public class CourseEditActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
 
         // -----------------------Находим календарь----------------------
-        Uri calendars = Uri.parse("content://com.android.calendar/calendars");
-        String[] projection = new String[] { "_id", "name" };
-        String calName;
-        //String calID="";
-        Cursor managedCursor = this.managedQuery(calendars, projection, null, null, null);
-        if (managedCursor != null && managedCursor.moveToFirst())
-        {
-            int nameColumn = managedCursor.getColumnIndex("name");
-            int idColumn = managedCursor.getColumnIndex("_id");
+            Uri calendars = Uri.parse("content://com.android.calendar/calendars");
+            String[] projection = new String[]{"_id", "name"};
+            String calName;
+            //String calID="";
+            Cursor managedCursor = this.managedQuery(calendars, projection, null, null, null);
+            if (managedCursor != null && managedCursor.moveToFirst()) {
+                int nameColumn = managedCursor.getColumnIndex("name");
+                int idColumn = managedCursor.getColumnIndex("_id");
 
                 calName = managedCursor.getString(nameColumn);
                 calID = managedCursor.getString(idColumn);
-              //  alert(calName+""+calID);
-               // if (calName != null) // … UI
+                //  alert(calName+""+calID);
+                // if (calName != null) // … UI
 
-        }
-        else alert("Err");
-        managedCursor.close();
+            } else alert("Err");
+            managedCursor.close();
+
         //-----------------------------------------------
 
 
@@ -234,6 +233,7 @@ public class CourseEditActivity extends AppCompatActivity {
 
                            long eventID =Long.parseLong(uri.getLastPathSegment());
 
+
                             ContentResolver cr2 = getContentResolver();
                             ContentValues values2 = new ContentValues();
                             values2.put(CalendarContract.Reminders.MINUTES, 0);
@@ -245,6 +245,11 @@ public class CourseEditActivity extends AppCompatActivity {
                             catch(SecurityException e){}
 
                             //-------------------------------------------------------------------
+
+
+                            //Добавляем данные в таблицу course_event
+                            data.put(DBHelper.KEY_COURSE_EVENT_COURSEID,courseId);
+                            data.put(DBHelper.KEY_COURSE_EVENT_EVENTID,eventID);
 
 
 

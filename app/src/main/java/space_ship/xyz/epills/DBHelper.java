@@ -31,6 +31,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String KEY_RECEPTIONS_TIME = "time";
     public static final String KEY_RECEPTIONS_COUNT = "count";
 
+    //таблица, связывающая id курса и id события
+    public static final String TABLE_COURSE_EVENT = "course_event";
+
+    public static final String KEY_COURSE_EVENT_COURSEID = "course_id";
+    public static final String KEY_COURSE_EVENT_EVENTID = "event_id";
+
+
     public DBHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -53,12 +60,19 @@ public class DBHelper extends SQLiteOpenHelper {
                 KEY_RECEPTIONS_COUNT + " text" +
                 ")"
         );
+        db.execSQL("create table " + TABLE_COURSE_EVENT + "(" +
+                KEY_COURSE_EVENT_COURSEID + " integer," +
+                KEY_COURSE_EVENT_EVENTID + " integer" +
+                ")"
+        );
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists " + TABLE_COURSES);
         db.execSQL("drop table if exists " + TABLE_RECEPTIONS);
+        db.execSQL("drop table if exists " + TABLE_COURSE_EVENT);
 
         onCreate(db);
     }
