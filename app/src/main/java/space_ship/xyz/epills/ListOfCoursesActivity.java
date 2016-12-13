@@ -116,7 +116,7 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
                 Date dateEnd = null;
                 long dateEndUnix, dateToEnd;
 
-           /* String str="";
+            /*String str="";
             for (String cn : cursor1.getColumnNames()) {
                 str = str.concat(cn + " = "
                         + cursor1.getString(cursor1.getColumnIndex(cn)) + "; ");

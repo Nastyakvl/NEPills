@@ -50,6 +50,7 @@ public class InfoCourseActivity extends AppCompatActivity {
     private DBHelper dbHelper;
     private SQLiteDatabase database;
 
+    int course_ID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +67,7 @@ public class InfoCourseActivity extends AppCompatActivity {
         Intent intent = getIntent();
         final String course_id = String.valueOf(intent.getIntExtra("course_id", 0));
         final int courseID = Integer.parseInt(course_id);
+        this.course_ID = courseID;
 
         //Получаем название, начало и конец приема лекарства из БД
         String table_info = "courses";
@@ -226,7 +228,10 @@ public class InfoCourseActivity extends AppCompatActivity {
             change_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    //открываем страницу редактирования
+                    Intent intent = new Intent(InfoCourseActivity.this, CourseEditActivity.class);
+                    intent.putExtra("course_id",course_ID);
+                    startActivity(intent);
                 }
             });
             tableLayout.addView(change_button);
