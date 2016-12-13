@@ -1,5 +1,10 @@
 package space_ship.xyz.epills;
 
+import android.content.ContentResolver;
+import android.content.ContentUris;
+import android.content.ContentValues;
+import android.net.Uri;
+import android.provider.CalendarContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.app.AlertDialog;
@@ -41,6 +46,7 @@ import static android.R.attr.id;
 public class InfoCourseActivity extends AppCompatActivity {
 
     private static final String LOG_TAG = "States";
+    private static final String DEBUG_TAG = "MyActivity";
     private DBHelper dbHelper;
     private SQLiteDatabase database;
 
@@ -53,23 +59,6 @@ public class InfoCourseActivity extends AppCompatActivity {
         //подключаемся к бд
         dbHelper = new DBHelper(this);
         database = dbHelper.getWritableDatabase();
-
-        /*Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, null, null, null, null, null, null);
-        if(eventInfo.moveToFirst()) {
-
-            int idIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_COURSEID);
-            int nameIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_EVENTID);
-            do {
-                String tempDbCourseInfo =   "idCourse: " +eventInfo.getInt(idIndex) +
-                        "\nidEvent: " + eventInfo.getString(nameIndex);
-
-
-
-                alert(tempDbCourseInfo);
-
-            } while(eventInfo.moveToNext());
-        }
-        else {alert("NOTHING");}*/
 
         final AlertDialog.Builder delete = new AlertDialog.Builder(this);
 
@@ -175,37 +164,38 @@ public class InfoCourseActivity extends AppCompatActivity {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     try {
-
                                         //Находим все eventID
-                                      //  String table = "course_event";
+                                        String table = "course_event";
                                         String[] columns = new String[]{"event_id"};
-                                       // String selection = "course_id = ?";
-                                        //String[] selectionArgs = new String[]{course_id};
-                                       // Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
-                                        String selection = "course_id = "+course_id;
-                                        Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, columns, selection, null, null, null, null);
-                                        alert(Integer.toString(eventInfo.getCount()));
+                                        String selection = "course_id = ?";
+                                        String[] selectionArgs = new String[]{course_id};
+                                        Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
+
+                                        //Удаляем события
+                                        if (eventInfo.moveToFirst())
+                                        {
+                                            do
+                                            {
+                                                long eventID = eventInfo.getLong(eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_EVENTID));
+                                                ContentResolver cr = getContentResolver();
+                                                ContentValues values = new ContentValues();
+                                                //Uri deleteUri = null;
+                                                Uri deleteUri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventID);
+                                                int rows = getContentResolver().delete(deleteUri, null, null);
+
+                                            }while (eventInfo.moveToNext());
+
+                                        }
+
+                                        //Удаляем все eventId по courseId
+                                        database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
+                                                    new String[] {course_id});
 
                                         //Удаление из бд
                                         database.delete(DBHelper.TABLE_COURSES, "_id = ?",
                                                 new String[]{course_id});
                                         database.delete(DBHelper.TABLE_RECEPTIONS, "courseid = ?",
                                                 new String[]{course_id});
-
-
-
-                                        //Удаляем все eventId по courseId
-                                        try
-                                        {
-                                            database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
-                                                    new String[] {course_id});
-
-                                        }
-                                        catch (Exception e)
-                                        {
-                                            alert(e.getMessage());
-                                        }
-
 
                                     } catch (Exception e) {
                                         alert(e.getMessage());
