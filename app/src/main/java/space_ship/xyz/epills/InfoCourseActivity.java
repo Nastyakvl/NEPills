@@ -164,11 +164,22 @@ public class InfoCourseActivity extends AppCompatActivity {
                                         database.delete(DBHelper.TABLE_RECEPTIONS, "courseid = ?",
                                                 new String[]{course_id});
 
+                                        //Находим все eventID
+                                        String table = "course_event";
+                                        String[] columns = new String[]{"event_id"};
+                                        String selection = "course_id = ?";
+                                        String[] selectionArgs = new String[]{course_id};
+                                        Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
+                                        alert(Integer.toString(eventInfo.getColumnCount()));
+
+
+
                                         //Удаляем все eventId по courseId
                                         try
                                         {
                                             database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
                                                     new String[] {course_id});
+
                                         }
                                         catch (Exception e)
                                         {
@@ -205,7 +216,7 @@ public class InfoCourseActivity extends AppCompatActivity {
             change_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    
+
                 }
             });
             tableLayout.addView(change_button);
