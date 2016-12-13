@@ -417,10 +417,10 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
 
 
 //Просмотр всех записей
-       /*Cursor cursorL = database.query(DBHelper.TABLE_COURSES, null, null, null, null, null, null);
+       Cursor cursorL = database.query(DBHelper.TABLE_COURSES, null, null, null, null, null, null);
 
         //cмотрим что в БД
-        if(cursorL.moveToFirst())
+       /* if(cursorL.moveToFirst())
         {
             int idIndex = cursorL.getColumnIndex(DBHelper.KEY_COURSES_ID);
             int nameIndex = cursorL.getColumnIndex(DBHelper.KEY_COURSES_NAME);

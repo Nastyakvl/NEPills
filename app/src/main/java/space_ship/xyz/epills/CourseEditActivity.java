@@ -141,7 +141,7 @@ public class CourseEditActivity extends AppCompatActivity {
                     SQLiteDatabase database = dbHelper.getWritableDatabase();
 
                     //очистка БД
-                  // database.delete(DBHelper.TABLE_COURSES, null, null);
+                   //database.delete(DBHelper.TABLE_COURSES, null, null);
                    //database.delete(DBHelper.TABLE_RECEPTIONS, null, null);
 
                     ContentValues data = new ContentValues();
@@ -248,8 +248,30 @@ public class CourseEditActivity extends AppCompatActivity {
 
 
                             //Добавляем данные в таблицу course_event
-                            data.put(DBHelper.KEY_COURSE_EVENT_COURSEID,courseId);
-                            data.put(DBHelper.KEY_COURSE_EVENT_EVENTID,eventID);
+                            ContentValues data2 = new ContentValues();
+
+                            data2.put(DBHelper.KEY_COURSE_EVENT_COURSEID,courseId);
+                            data2.put(DBHelper.KEY_COURSE_EVENT_EVENTID,eventID);
+                            database.insert(dbHelper.TABLE_COURSE_EVENT, null, data2);
+
+                           Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, null, null, null, null, null, null);
+                            if(eventInfo.moveToFirst()) {
+
+                                int idIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_COURSEID);
+                                int nameIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_EVENTID);
+                                do {
+                                    String tempDbCourseInfo =   "idCourse: " +eventInfo.getInt(idIndex) +
+                                            "\nidEvent: " + eventInfo.getString(nameIndex);
+
+
+
+                                    alert(tempDbCourseInfo);
+
+                                } while(eventInfo.moveToNext());
+                            }
+                            else {alert("NOTHING");}
+
+
 
 
 

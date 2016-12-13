@@ -60,7 +60,7 @@ public class DBHelper extends SQLiteOpenHelper {
                 KEY_RECEPTIONS_COUNT + " text" +
                 ")"
         );
-        db.execSQL("create table " + TABLE_COURSE_EVENT + "(" +
+        db.execSQL("create table " + TABLE_COURSE_EVENT + " (" +
                 KEY_COURSE_EVENT_COURSEID + " integer," +
                 KEY_COURSE_EVENT_EVENTID + " integer" +
                 ")"

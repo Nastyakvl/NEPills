@@ -54,6 +54,23 @@ public class InfoCourseActivity extends AppCompatActivity {
         dbHelper = new DBHelper(this);
         database = dbHelper.getWritableDatabase();
 
+        /*Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, null, null, null, null, null, null);
+        if(eventInfo.moveToFirst()) {
+
+            int idIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_COURSEID);
+            int nameIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_EVENTID);
+            do {
+                String tempDbCourseInfo =   "idCourse: " +eventInfo.getInt(idIndex) +
+                        "\nidEvent: " + eventInfo.getString(nameIndex);
+
+
+
+                alert(tempDbCourseInfo);
+
+            } while(eventInfo.moveToNext());
+        }
+        else {alert("NOTHING");}*/
+
         final AlertDialog.Builder delete = new AlertDialog.Builder(this);
 
         //Получаем _id лекарства
@@ -158,19 +175,22 @@ public class InfoCourseActivity extends AppCompatActivity {
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     try {
+
+                                        //Находим все eventID
+                                      //  String table = "course_event";
+                                        String[] columns = new String[]{"event_id"};
+                                       // String selection = "course_id = ?";
+                                        //String[] selectionArgs = new String[]{course_id};
+                                       // Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
+                                        String selection = "course_id = "+course_id;
+                                        Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, columns, selection, null, null, null, null);
+                                        alert(Integer.toString(eventInfo.getCount()));
+
                                         //Удаление из бд
                                         database.delete(DBHelper.TABLE_COURSES, "_id = ?",
                                                 new String[]{course_id});
                                         database.delete(DBHelper.TABLE_RECEPTIONS, "courseid = ?",
                                                 new String[]{course_id});
-
-                                        //Находим все eventID
-                                        String table = "course_event";
-                                        String[] columns = new String[]{"event_id"};
-                                        String selection = "course_id = ?";
-                                        String[] selectionArgs = new String[]{course_id};
-                                        Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
-                                        alert(Integer.toString(eventInfo.getColumnCount()));
 
 
 
