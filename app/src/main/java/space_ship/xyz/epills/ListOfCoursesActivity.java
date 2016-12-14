@@ -510,6 +510,7 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Intent refresh = new Intent(this, ListOfCoursesActivity.class);
         startActivity(refresh);
+       // this.getParent().finish();
         this.finish();
     }
 

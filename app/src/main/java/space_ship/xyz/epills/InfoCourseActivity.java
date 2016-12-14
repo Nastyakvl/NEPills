@@ -165,7 +165,7 @@ public class InfoCourseActivity extends AppCompatActivity {
                     delete_dialog.setPositiveButton("Да",
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
-                                    /*try {
+                                    try {
                                         //Находим все eventID
                                         String table = "course_event";
                                         String[] columns = new String[]{"event_id"};
@@ -192,17 +192,17 @@ public class InfoCourseActivity extends AppCompatActivity {
                                         //Удаляем все eventId по courseId
                                         database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
                                                     new String[] {course_id});
-*/
+
                                         //Удаление из бд
                                         database.delete(DBHelper.TABLE_COURSES, "_id = ?",
                                                 new String[]{course_id});
                                         database.delete(DBHelper.TABLE_RECEPTIONS, "courseid = ?",
                                                 new String[]{course_id});
 
-                      /*              } catch (Exception e) {
+                                    } catch (Exception e) {
                                         alert(e.getMessage());
                                     }
-                             */       //Возвращаемся на главный экран
+                                    //Возвращаемся на главный экран
                                     Intent intent = new Intent(InfoCourseActivity.this, ListOfCoursesActivity.class);
                                     startActivity(intent);
                                 }
@@ -231,7 +231,8 @@ public class InfoCourseActivity extends AppCompatActivity {
                     //открываем страницу редактирования
                     Intent intent = new Intent(InfoCourseActivity.this, CourseEditActivity.class);
                     intent.putExtra("course_id",course_ID);
-                    startActivity(intent);
+                   // startActivity(intent);
+                    startActivityForResult(intent,1);
                 }
             });
             tableLayout.addView(change_button);
@@ -241,6 +242,13 @@ public class InfoCourseActivity extends AppCompatActivity {
 
         }
 
+    }
+
+   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Intent refresh = new Intent(this, ListOfCoursesActivity.class);
+       startActivity(refresh);
+       //this.getParent().finish();
+        this.finish();
     }
 
     public void alert(String text) {

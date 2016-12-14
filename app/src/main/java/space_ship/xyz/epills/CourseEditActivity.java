@@ -1,6 +1,7 @@
 package space_ship.xyz.epills;
 
 import android.content.ContentResolver;
+import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
@@ -84,6 +85,27 @@ public class CourseEditActivity extends AppCompatActivity {
 
         dbHelper = new DBHelper(this);
 
+        // —---------------------Находим календарь--------------------—
+        Uri calendars = Uri.parse("content://com.android.calendar/calendars");
+        String[] projection = new String[]{"_id", "name"};
+        String calName;
+//String calID="";
+        Cursor managedCursor = this.managedQuery(calendars, projection, null, null, null);
+        if (managedCursor != null && managedCursor.moveToFirst()) {
+            int nameColumn = managedCursor.getColumnIndex("name");
+            int idColumn = managedCursor.getColumnIndex("_id");
+
+            calName = managedCursor.getString(nameColumn);
+            calID = managedCursor.getString(idColumn);
+// alert(calName+""+calID);
+// if (calName != null) // … UI
+
+        } else alert("Err");
+        managedCursor.close();
+
+//-----------------------------------------------
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setImageResource(R.drawable.ic_course_edit_button2);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -151,7 +173,7 @@ public class CourseEditActivity extends AppCompatActivity {
                                 data.put(DBHelper.KEY_RECEPTIONS_COURSEID, courseId);
                                 data.put(DBHelper.KEY_RECEPTIONS_TIME, receptions_info[i][0]);
                                 data.put(DBHelper.KEY_RECEPTIONS_COUNT, receptions_info[i][1]);
-    /*
+
 
                                //-----------------Для напоминания---------------
                                 Date dateNotif=null;
@@ -194,14 +216,14 @@ public class CourseEditActivity extends AppCompatActivity {
                                // alert("minus "+String.valueOf(end-startMillis));
 
 
-                               */
-    /* try {
+
+                                /* try {
                                     dateNotif = format1.parse(date_end+" "+receptions_info[i][0]); //переводим строку в дату
                                 } catch (ParseException e) {
                                     e.printStackTrace();
                                 }
                                 beginTime.setTime(dateNotif);
-                                String until=String.valueOf(beginTime.getTimeInMillis());*//*
+                                String until=String.valueOf(beginTime.getTimeInMillis());*/
 
 
                                 ContentResolver cr = getContentResolver();
@@ -234,9 +256,9 @@ public class CourseEditActivity extends AppCompatActivity {
                                 catch(SecurityException e){}
 
                                 //-------------------------------------------------------------------
-    */
 
-    /*
+
+
                                 //Добавляем данные в таблицу course_event
                                 ContentValues data2 = new ContentValues();
 
@@ -244,7 +266,7 @@ public class CourseEditActivity extends AppCompatActivity {
                                 data2.put(DBHelper.KEY_COURSE_EVENT_EVENTID,eventID);
                                 database.insert(dbHelper.TABLE_COURSE_EVENT, null, data2);
 
-                               Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, null, null, null, null, null, null);
+                            /*   Cursor eventInfo = database.query(DBHelper.TABLE_COURSE_EVENT, null, null, null, null, null, null);
                                 if(eventInfo.moveToFirst()) {
 
                                     int idIndex = eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_COURSEID);
@@ -274,6 +296,35 @@ public class CourseEditActivity extends AppCompatActivity {
                     //редактирование
                     else
                     {
+                        //Находим все eventID
+                        String table = "course_event";
+                        String[] columns = new String[]{"event_id"};
+                        String selection = "course_id = ?";
+                        String[] selectionArgs = new String[]{course_id};
+                        Cursor eventInfo = database.query(table, columns, selection, selectionArgs, null, null, null);
+                        //Удаляем события
+                        if (eventInfo.moveToFirst())
+                        {
+                            do
+                            {
+                                long eventID = eventInfo.getLong(eventInfo.getColumnIndex(DBHelper.KEY_COURSE_EVENT_EVENTID));
+                                ContentResolver cr = getContentResolver();
+                                ContentValues values = new ContentValues();
+                                //Uri deleteUri = null;
+                                Uri deleteUri = ContentUris.withAppendedId(CalendarContract.Events.CONTENT_URI, eventID);
+                                int rows = getContentResolver().delete(deleteUri, null, null);
+
+                            }while (eventInfo.moveToNext());
+
+                        }
+
+                        //Удаляем все eventId по courseId
+                        database.delete(DBHelper.TABLE_COURSE_EVENT, "course_id = ?",
+                                new String[] {course_id});
+
+
+
+
                         ContentValues data = new ContentValues();
                         data.put(DBHelper.KEY_COURSES_NAME, name);
                         data.put(DBHelper.KEY_COURSES_DATESTART, date_start);
@@ -296,7 +347,90 @@ public class CourseEditActivity extends AppCompatActivity {
                             data.put(DBHelper.KEY_RECEPTIONS_COUNT, receptions_info[i][1]);
 
                             database.insert(dbHelper.TABLE_RECEPTIONS, null, data);
+
+                            //-----------------Для напоминания---------------
+                            Date dateNotif=null;
+                            SimpleDateFormat format1 = new SimpleDateFormat("dd.MM.yyyy hh:mm");
+                            long startMillis = 0;
+                            long endMillis = 0;
+                            try {
+                                dateNotif = format1.parse(date_start+" "+receptions_info[i][0]); //переводим строку в дату
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+
+                            //startMillis = (long) dateNotif.getTime() / 1000;
+
+                            Calendar beginTime = Calendar.getInstance();
+                            beginTime.setTime(dateNotif);
+
+                            startMillis = beginTime.getTimeInMillis();
+
+                            endMillis = startMillis +900000;
+
+                            long end;
+                            try {
+                                dateNotif = format1.parse(date_end+" "+receptions_info[i][0]); //переводим строку в дату
+                            } catch (ParseException e) {
+                                e.printStackTrace();
+                            }
+
+                            //startMillis = (long) dateNotif.getTime() / 1000;
+
+                            Calendar endTime = Calendar.getInstance();
+                            endTime.setTime(dateNotif);
+
+                            end = endTime.getTimeInMillis();
+
+                            int count=(int) ( (end-startMillis)/(24 * 60 * 60 * 1000))+1;
+
+                            ContentResolver cr = getContentResolver();
+                            ContentValues values = new ContentValues();
+                            values.put(CalendarContract.Events.DTSTART, startMillis);
+                            values.put(CalendarContract.Events.DTEND, endMillis);
+                            values.put(CalendarContract.Events.TITLE, "Время пить лекарство: "+name);
+                            values.put(CalendarContract.Events.DESCRIPTION, receptions_info[i][0]);
+                            values.put(CalendarContract.Events.CALENDAR_ID, calID);
+                            values.put(CalendarContract.Events.EVENT_TIMEZONE, "Russia/Moscow");
+                            values.put(CalendarContract.Events.RRULE, "FREQ=DAILY;COUNT="+String.valueOf(count)+";");
+
+                            Uri uri=null;
+                            try {
+                                uri = cr.insert(CalendarContract.Events.CONTENT_URI, values);
+                            }
+                            catch(SecurityException e){alert(e.toString());}
+
+                            long eventID =Long.parseLong(uri.getLastPathSegment());
+
+
+                            ContentResolver cr2 = getContentResolver();
+                            ContentValues values2 = new ContentValues();
+                            values2.put(CalendarContract.Reminders.MINUTES, 0);
+                            values2.put(CalendarContract.Reminders.EVENT_ID, eventID);
+                            values2.put(CalendarContract.Reminders.METHOD, CalendarContract.Reminders.METHOD_ALERT);
+                            try {
+                                Uri uruu = cr2.insert(CalendarContract.Reminders.CONTENT_URI, values2);
+                            }
+                            catch(SecurityException e){}
+
+                            //-------------------------------------------------------------------
+
+
+
+                            //Добавляем данные в таблицу course_event
+                            ContentValues data2 = new ContentValues();
+
+                            data2.put(DBHelper.KEY_COURSE_EVENT_COURSEID,course_id);
+                            data2.put(DBHelper.KEY_COURSE_EVENT_EVENTID,eventID);
+                            database.insert(dbHelper.TABLE_COURSE_EVENT, null, data2);
+
                         }
+
+
+
+
+
+
                     }
 
                     if(status)
@@ -315,11 +449,18 @@ public class CourseEditActivity extends AppCompatActivity {
                        // Intent intent = new Intent(CourseEditActivity.this, ListOfCoursesActivity.class);
                         //startActivity(intent);
                        // finish();
-
-                        Intent intent = new Intent();
-                        intent.putExtra("name", name);
-                       // setResult(RESULT_OK, intent);
-                        finish();
+                        if(editingCourseID==0){Intent intent = new Intent();
+                            intent.putExtra("name", name);
+                            // setResult(RESULT_OK, intent);
+                           // getParent().getParent().finish();
+                            finish();
+                        }
+                        else {
+                            Intent intent = new Intent();
+                            intent.putExtra("name", name);
+                            // setResult(RESULT_OK, intent);
+                            finish();
+                        }
 
                     }
                     else
