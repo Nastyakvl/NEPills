@@ -80,7 +80,7 @@ public class CourseEditActivity extends AppCompatActivity {
         setContentView(R.layout.activity_course_edit);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Добавление курса");
+        toolbar.setTitle( ( editingCourseID == 0  ? "Добавление" : "Редактирование" ) + " курса");
         setSupportActionBar(toolbar);
 
         dbHelper = new DBHelper(this);
@@ -449,17 +449,20 @@ public class CourseEditActivity extends AppCompatActivity {
                        // Intent intent = new Intent(CourseEditActivity.this, ListOfCoursesActivity.class);
                         //startActivity(intent);
                        // finish();
-                        if(editingCourseID==0){Intent intent = new Intent();
+                        if(editingCourseID==0){ Intent intent = new Intent();
                             intent.putExtra("name", name);
                             // setResult(RESULT_OK, intent);
-                           // getParent().getParent().finish();
                             finish();
                         }
                         else {
                             Intent intent = new Intent();
                             intent.putExtra("name", name);
                             // setResult(RESULT_OK, intent);
+                            //getParent().getParent().finish();
+                            //getParent().finish();
+                           // getParent().getParent().getParent().finish();
                             finish();
+
                         }
 
                     }

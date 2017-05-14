@@ -203,8 +203,12 @@ public class InfoCourseActivity extends AppCompatActivity {
                                         alert(e.getMessage());
                                     }
                                     //Возвращаемся на главный экран
-                                    Intent intent = new Intent(InfoCourseActivity.this, ListOfCoursesActivity.class);
+                                    /*Intent intent = new Intent(InfoCourseActivity.this, ListOfCoursesActivity.class);
                                     startActivity(intent);
+                                    finish();*/
+                                    Intent intent = new Intent();
+                                    finish();
+
                                 }
                             });
                     delete_dialog.setNeutralButton("Отменить",
@@ -232,7 +236,9 @@ public class InfoCourseActivity extends AppCompatActivity {
                     Intent intent = new Intent(InfoCourseActivity.this, CourseEditActivity.class);
                     intent.putExtra("course_id",course_ID);
                    // startActivity(intent);
+
                     startActivityForResult(intent,1);
+                    finish();//getParent().getParent().finish();
                 }
             });
             tableLayout.addView(change_button);

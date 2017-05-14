@@ -500,10 +500,15 @@ public class ListOfCoursesActivity extends AppCompatActivity implements View.OnC
        /*  Intent intent = new Intent(ListOfCoursesActivity.this, CourseEditActivity.class);
         startActivity(intent);*/
       //  String t=tableRow.;
-        Intent intent = new Intent(ListOfCoursesActivity.this,InfoCourseActivity.class);
+       /* Intent intent = new Intent(ListOfCoursesActivity.this,InfoCourseActivity.class);
                int id=v.getId();
                intent.putExtra("course_id",id);
-               startActivity(intent);
+               startActivity(intent);*/
+        Intent intent = new Intent(ListOfCoursesActivity.this,InfoCourseActivity.class);
+        int id=v.getId();
+        intent.putExtra("course_id",id);
+        //startActivity(intent);
+        startActivityForResult(intent, 2);
     }
 
 
